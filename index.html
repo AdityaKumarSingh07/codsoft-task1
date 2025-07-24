@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #333333;
+      --accent-color: #4CAF50;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #eeeeee;
+      --accent-color: #90CAF9;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--accent-color);
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    section {
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+
+    .skills ul, .projects ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .resume a, .contact a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #f4f4f4;
+      color: #666;
+    }
+
+    .toggle-switch {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .project-card {
+      background: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: scale(1.03);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    [data-theme="dark"] .project-card {
+      background: #1e1e1e;
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-switch">
+    <label>
+      <input type="checkbox" id="modeToggle"> Dark Mode
+    </label>
+  </div>
+
+  <header>
+    <h1>Aditya Singh</h1>
+    <p>Web Developer | Problem Solver</p>
+  </header>
+
+  <section class="about">
+    <h2>About Me</h2>
+    <img src="aditya.png" alt="My Photo">
+    <p>Hello! I'm a passionate Computer Science student with skills in web development, DSA, and creative thinking. I love building projects and solving problems.</p>
+  </section>
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Java</li>
+      <li>React</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li class="project-card">
+        <img src="project1.png" alt="Library Management System">
+        <h3>Library Management System</h3>
+        <p>Java + MySQL based app with user and book management. It includes features like borrow/return books, search filters, and fine calculation.</p>
+      </li>
+      <li class="project-card">
+        <img src="portfolio.png" alt="Portfolio Website">
+        <h3>Portfolio Website</h3>
+        <p>Personal portfolio website built with HTML, CSS, and JavaScript. Includes dark mode toggle and responsive layout.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="resume">
+    <h2>Resume</h2>
+    <p><a href="#" download>Download My Resume (PDF)</a></p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: adityasingh@example.com</p>
+    <p>Phone: +91-9876543210</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Aditya Singh. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('modeToggle');
+    toggle.addEventListener('change', function () {
+      document.documentElement.setAttribute('data-theme', this.checked ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

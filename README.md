@@ -3,7 +3,7 @@
 
 This is my personal portfolio website built using **HTML**, **CSS**, and **JavaScript**.  
 It showcases my projects, skills, resume, and contact details — along with a dark/light mode toggle.
-## DEMO LIVE LINK:
+## DEMO LIVE LINK: https://adityakumarsingh07.github.io/codsoft-task1/
 
 ## 🌟 Features
 
